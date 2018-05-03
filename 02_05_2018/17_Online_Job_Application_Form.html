@@ -5,9 +5,12 @@
     <title>Online Job Application Form</title>
     <style>
         body{
-            background-color: lightgreen;
+            background-image: url("../img/forest.jpg");
             font-family: "Comic Sans MS", sans-serif;
             margin: 0;
+        }
+        h1{
+            color: white;
         }
         h2{
             background-color: forestgreen;
@@ -17,6 +20,47 @@
         }
         td{
             padding: 7px;
+            font-size: 18px;
+            color: white;
+        }
+        input[type='text'],
+        input[type='date'],
+        input[type='time'],
+        input[type='number'],
+        input[type='month']{
+            height: 30px;
+            border-radius: 10px;
+            border: none; /* to remove the border */
+        }
+
+        input[type='text']:focus,
+        input[type='date']:focus,
+        input[type='time']:focus,
+        input[type='number']:focus,
+        input[type='month']:focus,
+        textarea:focus{
+            outline: none;
+            border: 1px solid green;
+        }
+        textarea{
+            border-radius: 10px;
+            border: none; /* to remove the border */
+        }
+
+        .button{
+            background-color: green;
+            border: none;
+            color: white;
+            padding: 10px 55px;
+            font-family: "Comic Sans MS", sans-serif;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+
+        .button:hover{
+            cursor: pointer;
+            background-color: darkgreen;
+            box-shadow: 5px 5px 5px yellow;
         }
     </style>
 </head>
@@ -306,9 +350,57 @@
                         <input type="radio" name="jobtype" value="other">Other
                     </td>
                 </tr>
+                <tr>
+                    <td>Date of Joining</td>
+                    <td>
+                        <input type="date">
+                    </td>
+                    <td>Time Of Joining</td>
+                    <td>
+                        <input type="time">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Preferred Job Location</td>
+                    <td>
+                        <input type="radio" name="joblocation" value="hyderabad">Hyderabad
+                    </td>
+                    <td>
+                        <input type="radio" name="joblocation" value="bangalore">Bangalore
+                    </td>
+                    <td>
+                        <input type="radio" name="joblocation" value="other">Other
+                    </td>
+                </tr>
+                <tr>
+                    <td>Willing to Relocate to Hyderabad ?</td>
+                    <td>
+                        <input type="radio" name="relocate" value="yes">YES
+                    </td>
+                    <td>
+                        <input type="radio" name="relocate" value="no">NO
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td colspan="3">
+                        The above mentioned information is correct as per my knowledge.
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Submit" class="button">
+                    </td>
+                    <td>
+                        <input type="reset" value="Reset" class="button">
+                    </td>
+                    <td></td>
+                </tr>
             </table>
         </div>
     </form>
-
 </body>
 </html>
