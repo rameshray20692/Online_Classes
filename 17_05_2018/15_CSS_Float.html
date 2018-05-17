@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Float</title>
+    <style>
+        .left{
+            border: 2px solid forestgreen;
+            background-color: whitesmoke;
+            padding: 10px;
+            width: 200px;
+            float: left;
+        }
+
+        .right{
+            border: 2px solid forestgreen;
+            background-color: whitesmoke;
+            padding: 10px;
+            width: 200px;
+            float: right;
+        }
+
+        .clear{
+            clear: both;
+        }
+
+        .clear h1{
+            background-color: seagreen;
+            color: white;
+            text-align: center;
+        }
+
+        .news{
+            border: 2px solid green;
+            padding: 10px;
+            overflow: auto;
+        }
+
+        .news #right{
+            float: right;
+        }
+        #padding{
+            border: 2px solid red;
+        }
+
+        #padding img{
+            background-color: yellow;
+            margin-left: 800px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="left">
+        <h1>Float Left</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sint!</p>
+    </div>
+
+    <div class="right">
+        <h1>Float Right</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sint!</p>
+    </div>
+
+    <div class="clear">
+        <h1>clear me</h1>
+    </div>
+
+    <div class="news">
+        <img id="right" src="img/gallery3.jpeg" width="400" height="200">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet animi asperiores assumenda cupiditate et exercitationem incidunt modi unde! Architecto, nobis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. At atque dicta dolores quae qui sequi sit suscipit vero? A assumenda corporis exercitationem laudantium neque nostrum numquam quos repudiandae rerum voluptatem. A aliquam aliquid architecto asperiores assumenda aut deleniti dolorem doloribus dolorum eius eos et ex expedita ipsa, iure nisi nulla obcaecati, perferendis quis recusandae rem saepe sint ut veniam veritatis. Adipisci aliquid cumque deleniti dolorum eaque eos laborum laudantium, molestiae nisi pariatur praesentium qui quidem repellat, rerum, similique veniam voluptas.</p>
+    </div>
+
+    <div id="padding">
+        <img src="img/gallery2.jpeg" width="400" height="200">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at atque consequuntur debitis ducimus eligendi eveniet explicabo, facere fugit hic, ipsa iste necessitatibus ullam vitae voluptatibus? Enim ipsam pariatur praesentium unde! A animi beatae eligendi modi nam nesciunt nulla, quos repellat sapiente sed? Autem dolore doloribus, minus praesentium sequi veniam voluptatum! A, asperiores aspernatur atque beatae consequuntur dignissimos distinctio dolor dolore dolores in laborum minus odio quia quis quo reprehenderit sed similique sint soluta suscipit ullam veritatis voluptas voluptate voluptatum?</p>
+    </div>
+
+
+</body>
+</html>
