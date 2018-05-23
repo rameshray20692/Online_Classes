@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 3 Transitions</title>
+    <style>
+        body{
+            font-family: "Comic Sans MS", sans-serif;
+        }
+
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: orangered;
+        }
+
+        #t_width{
+            transition: width 2s;
+        }
+
+        #t_width:hover{
+            width: 200px;
+        }
+
+        #t_height{
+            transition: height 5s;
+        }
+
+        #t_height:hover{
+            height: 200px;
+        }
+
+        #t_both{
+            transition: all 2s;
+        }
+
+        #t_both:hover{
+            width: 200px;
+            height: 200px;
+        }
+
+        #t_rotate{
+            transition: all 5s;
+        }
+
+        #t_rotate:hover{
+            width: 200px;
+            transform: rotate(180deg);
+        }
+
+        #t_timing{
+            margin-bottom: 50px;
+            transition: width 4s;
+            transition-timing-function: ease-in-out;
+        }
+
+        #t_timing:hover{
+            width: 400px;
+        }
+
+    </style>
+</head>
+<body>
+
+   <h2>Transition Width</h2>
+   <div id="t_width"></div>
+
+   <h2>Transition Height</h2>
+   <div id="t_height"></div>
+
+   <h2>Transition Both</h2>
+   <div id="t_both"></div>
+
+   <h2>Transition with Rotate</h2>
+   <div id="t_rotate"></div>
+
+   <h2>Transition Timing</h2>
+   <div id="t_timing"></div>
+
+</body>
+</html>
