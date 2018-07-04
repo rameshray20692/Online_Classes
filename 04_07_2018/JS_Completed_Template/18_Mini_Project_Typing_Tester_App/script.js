@@ -10,6 +10,8 @@ var minutes = 0;
 var seconds = 0;
 var milliSeconds = 0;
 var currentTime = "";
+var interval = 0;
+var timerRunning = false;
 
 // Add leading zero to numbers 9 or below:
 function leadingZero(time) {
@@ -42,23 +44,64 @@ function startTimer() {
 
 
 // Match the text entered with the provided text on the page:
+function spellCheck() {
+    var textEntered = textArea.value;
+    var partialText = originalText.substr(0,textEntered.length);
 
+    if(textEntered.length === 0){
+        textAreaBorder.style.borderColor = 'gray';
+    }
+    else{
+        if(textEntered === originalText){
+            textAreaBorder.style.borderColor = 'forestgreen';
+            // stop the timer
+            clearInterval(interval);
+            // Display Congratulations Message
+            congSection.style.display = 'block';
+        }
+        else{
+            if(textEntered === partialText){
+                textAreaBorder.style.borderColor = 'lightblue';
+            }
+            else{
+                textAreaBorder.style.borderColor = 'orangered';
+            }
+        }
+    }
+}
 
 
 
 // Start the timer:
 function start() {
     var textEnteredLength = textArea.value.length;
-    if(textEnteredLength === 0){
+    if(textEnteredLength === 0 && !timerRunning){
         // start Timer
-        setInterval(startTimer,10);
+        interval = setInterval(startTimer,10);
+        timerRunning = true;
     }
 
 }
 
 
 // Reset everything:
+function reset() {
+    clearInterval(interval);
+    timer = 0;
+    minutes = 0;
+    seconds = 0;
+    milliSeconds = 0;
+    currentTime = "";
+    interval = 0;
+    timerRunning = false;
+    theTimer.innerHTML = "00:00:00";
+    textArea.value = '';
+    textAreaBorder.style.borderColor = 'gray';
+    congSection.style.display = 'none';
+}
 
 
 // Event listeners for keyboard input and the reset button:
 textArea.addEventListener('keypress',start);
+textArea.addEventListener('keyup',spellCheck);
+resetButton.addEventListener('click',reset);
