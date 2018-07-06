@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS DOM Manipulation</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: "Comic Sans MS",sans-serif;
+        }
+        h2{
+            background-color: lightgreen;
+            text-align: center;
+            padding: 10px;
+        }
+        div{
+            background-color: seagreen;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>JS DOM Manipulation</h2>
+    <div>
+        <h1 id="display"></h1>
+    </div>
+
+</body>
+<script>
+
+    // BOM Operations
+
+    // width of the browser
+    var width = window.innerWidth;
+    console.log("The Width of the browser is : " + width + "px");
+
+    var height = window.innerHeight;
+    console.log("The height of the browser is : " + height + "px");
+
+    // Open a new Tab
+    //window.open();
+
+    // DOM Properties to get body , title , URL
+    var body = document.body;
+    console.log(body);
+
+    var title = document.title;
+    console.log(title);
+
+    var url = document.URL;
+    console.log(url);
+
+
+
+    //DOM Methods
+    //document.getElementById();
+    //document.getElementsByClassName();
+    //document.getElementsByTagName();
+    //document.querySelector();
+    //document.querySelectorAll();
+
+    // DOM Manipulation
+    var time = 13;
+    if(time <= 12){
+        document.querySelector('#display').innerHTML = "Good Morning";
+    }
+    else if(time > 12 && time <= 17){
+        document.querySelector('#display').innerHTML = "Good AfterNoon";
+    }
+    else{
+        document.querySelector('#display').innerHTML = "Good Evening";
+    }
+
+    // DOM Events
+
+
+
+</script>
+</html>
